@@ -23,8 +23,7 @@ npm install
 php artisan migrate
 You can manually insert user credentials into the users table to access the admin panel.
 
-
-
+```
 This project is free to use and released solely for educational purposes.
 
 ## 🌐 Contact  
