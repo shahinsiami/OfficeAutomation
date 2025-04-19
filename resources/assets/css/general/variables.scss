@@ -1,0 +1,56 @@
+$mainColor1: #ffffff;
+$mainColor2: #000000;
+$mainColor3: #8e0000;
+$mainColor4: #e0e0e0;
+$mainColor5: #727272;
+$mainColor6: #ef9a9a;
+$mainColor7: rgb(224,224,224,0.5);
+$mainColor8: #9e9e9e;
+$mainColor9: "";
+$mainColor10: "";
+//
+$fontColor1: #ffffff;
+$fontColor2: #000000;
+$fontColor3: #c62828;
+$fontColor4: #2e7d32;
+//
+@mixin font($fontName) {
+    @if $fontName == enSans {
+        font-family: sans-serif, Arial, Helvetica;
+    } @else if $fontName == faSans {
+        font-family: IRANSans, Yekan, Arial;
+    } @else if $fontName == roya {
+        font-family: RoyaWeb, Yekan, Arial;
+    } @else if $fontName == royaBlack {
+        font-family: RoyaWebBlack, Yekan, Arial;
+    } @else if $fontName == royaBold {
+        font-family: RoyaWebBold, Yekan, Arial;
+    } @else if $fontName == yekan {
+        font-family: Yekan, Yekan, Arial;
+    } @else if $fontName == koodak {
+        font-family: Koodak, Yekan, Arial;
+    }
+}
+//
+@mixin shadow($x, $y, $blur, $spread, $color) {
+    -webkit-box-shadow: $x + px $y + px $blur + px $spread + px $color;
+    -moz-box-shadow: $x + px $y + px $blur + px $spread + px $color;
+    box-shadow: $x + px $y + px $blur + px $spread + px $color;
+}
+//
+@mixin size($minSize, $maxSize) {
+    @media (min-width: $minSize+px) and (max-width: $maxSize+px) {
+        @content;
+    }
+}
+@mixin maxSize($maxSize) {
+    @media (max-width: $maxSize+px) {
+        @content;
+    }
+}
+@mixin minSize($minSize) {
+    @media (min-width: $minSize+px) {
+        @content;
+    }
+}
+//
